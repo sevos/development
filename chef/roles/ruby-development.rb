@@ -1,4 +1,4 @@
-name "ruby"
+name "ruby-development"
 description "installs rvm and given ruby version for vagrant user"
 
 run_list "recipe[rvm::user]"
@@ -8,7 +8,8 @@ default_attributes(
     'user_installs' => [
       {
         'user' => 'vagrant',
-        'default_ruby' => '1.9.2'
+        'default_ruby' => '1.9.2',
+        'rubies' => []
       }
     ]
   }
