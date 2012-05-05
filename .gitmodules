@@ -7,3 +7,6 @@
 [submodule "chef/cookbooks/rvm"]
 	path = chef/cookbooks/rvm
 	url = https://github.com/fnichol/chef-rvm.git
+[submodule "chef/cookbooks/openssl"]
+	path = chef/cookbooks/openssl
+	url = https://github.com/opscode-cookbooks/openssl.git

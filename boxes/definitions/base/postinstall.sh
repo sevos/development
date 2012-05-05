@@ -37,6 +37,7 @@ apt-get -y install ruby rubygems
 
 # Installing chef & Puppet
 gem install chef --no-ri --no-rdoc
+gem pristine --all --no-extensions
 # gem install puppet --no-ri --no-rdoc
 
 # Installing vagrant keys
