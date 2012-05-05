@@ -1,3 +1,5 @@
 iso/
+projects/
 *.box
 *.swp
+.vagrant
