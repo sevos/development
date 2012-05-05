@@ -4,3 +4,6 @@
 [submodule "chef/cookbooks/postgresql"]
 	path = chef/cookbooks/postgresql
 	url = https://github.com/coroutine/chef-postgresql.git
+[submodule "chef/cookbooks/rvm"]
+	path = chef/cookbooks/rvm
+	url = https://github.com/fnichol/chef-rvm.git
