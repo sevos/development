@@ -45,9 +45,13 @@ Vagrant::Config.run do |config|
     chef.roles_path = "../../chef/roles"
     chef.data_bags_path = "../../chef/data_bags"
     chef.add_role "ruby-development"
+    chef.add_recipe "postgresql::server"
 
     # You may also specify custom JSON attributes:
     chef.json = {
+      postgresql: {
+        password: { postgres: 'qwerty' }
+      }
     }
   end
 
