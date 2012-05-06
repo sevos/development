@@ -1,7 +1,7 @@
 name "ruby-development"
 description "installs rvm and given ruby version for vagrant user"
 
-run_list "recipe[rvm::user]"
+run_list "recipe[rvm::user]", "recipe[xvfb]"
 
 default_attributes(
   'rvm' => {
@@ -12,6 +12,7 @@ default_attributes(
         'rubies' => []
       }
     ]
-  }
+  },
+  'xvfb' => { 'display' => 0}
 )
 
