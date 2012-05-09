@@ -13,3 +13,9 @@
 [submodule "chef/cookbooks/redis"]
 	path = chef/cookbooks/redis
 	url = https://github.com/ctrabold/chef-redis.git
+[submodule "chef/cookbooks/python"]
+	path = chef/cookbooks/python
+	url = https://github.com/fnichol/chef-python.git
+[submodule "chef/cookbooks/build-essential"]
+	path = chef/cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git
