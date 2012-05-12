@@ -19,3 +19,6 @@
 [submodule "chef/cookbooks/build-essential"]
 	path = chef/cookbooks/build-essential
 	url = https://github.com/opscode-cookbooks/build-essential.git
+[submodule "chef/cookbooks/tmux"]
+	path = chef/cookbooks/tmux
+	url = https://github.com/opscode-cookbooks/tmux.git
