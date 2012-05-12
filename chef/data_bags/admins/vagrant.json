@@ -1,0 +1,18 @@
+{
+	"id": "vagrant",
+	"dotfiles": {
+		"comment": "section for dotfiles recipe only",
+		"enabled_standard": false,
+		"enabled_custom": true,
+		"custom_dotfiles": [
+			".bashrc",
+			".bash_profile",
+			".gemrc",
+      ".gitconfig",
+      ".tmux.conf",
+      ".vimrc"
+		],
+		"custom_dotfiles_repo": "git://github.com/sevos/dotfiles.git"
+	},
+  "vimfiles_repository": "git://github.com/sevos/vimfiles.git"
+}
