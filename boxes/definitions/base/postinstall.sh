@@ -60,6 +60,20 @@ rm -f /EMPTY
 echo "cleaning up dhcp leases"
 rm /var/lib/dhcp3/*
 
+# Remove GRUB timeout
+cat << EOF | patch /etc/grub.d/00_header
+235,239c235
+< if [ "\${recordfail}" = 1 ]; then
+<   set timeout=-1
+< else
+<   set timeout=${2}
+< fi
+---
+>   set timeout=0
+EOF
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
 # Make sure Udev doesn't block our network
 # http://6.ptmc.org/?p=164
 echo "cleaning up udev rules"
