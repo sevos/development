@@ -28,3 +28,9 @@
 [submodule "chef/cookbooks/dotfiles"]
 	path = chef/cookbooks/dotfiles
 	url = https://github.com/lebedevdsl/chef-dotfiles.git
+[submodule "chef/cookbooks/erlang"]
+	path = chef/cookbooks/erlang
+	url = git://github.com/sevos/esl-erlang-chef-cookbook.git
+[submodule "chef/cookbooks/apt"]
+	path = chef/cookbooks/apt
+	url = https://github.com/fnichol/chef-apt.git
