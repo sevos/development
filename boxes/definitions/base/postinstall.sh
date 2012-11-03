@@ -38,7 +38,7 @@ apt-get -y install ruby rubygems
 # Installing chef & Puppet
 gem install chef --no-ri --no-rdoc --version=0.10.8
 gem pristine --all --no-extensions
-# gem install puppet --no-ri --no-rdoc
+gem install puppet --no-ri --no-rdoc
 
 # Installing vagrant keys
 mkdir /home/vagrant/.ssh

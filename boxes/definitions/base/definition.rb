@@ -2,14 +2,14 @@
 # is only because it hasn't been released yet.
 Veewee::Session.declare({
   :cpu_count => '1',
-  :memory_size=> '1536',
-  :disk_size => '10140',
+  :memory_size=> '1024',
+  :disk_size => '5120',
   :disk_format => 'VDI',
   :hostiocache => 'on',
   :os_type_id => 'Ubuntu_64',
-  :iso_file => "ubuntu-12.04-server-amd64.iso",
-  :iso_src => "http://releases.ubuntu.com/12.04/ubuntu-12.04-server-amd64.iso",
-  :iso_md5 => 'f2e921788d35bbdf0336d05d228136eb',
+  :iso_file => "ubuntu-12.04.1-server-amd64.iso",
+  :iso_src => "http://releases.ubuntu.com/12.04/ubuntu-12.04.1-server-amd64.iso",
+  :iso_md5 => 'a8c667e871f48f3a662f3fbf1c3ddb17',
   :iso_download_timeout => "1000",
   :boot_wait => "4",
   :boot_cmd_sequence => [
@@ -40,7 +40,7 @@ Veewee::Session.declare({
         :rtcuseutc => 'on',
         :bioslogofadein => 'off',
         :bioslogofadeout => 'off',
-        :vram => '32'
+        :vram => '16'
       }
     ]
   }
