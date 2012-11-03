@@ -4,3 +4,4 @@ projects/
 *.swp
 .vagrant
 .idea/
+chef/tmp
