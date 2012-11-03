@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# cookbook 'chef-client'
+
+# cookbook 'apache2', '>= 1.0.0'
+
+# cookbook 'rvm',
+#   :git => 'https://github.com/fnichol/chef-rvm'
+
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'
+
+cookbook 'apt'
+cookbook 'build_essential', :git => 'https://github.com/opscode-cookbooks/build-essential.git'
+cookbook 'erlang', :git => 'https://github.com/sevos/esl-erlang-chef-cookbook.git'
+cookbook 'git', :git => 'https://github.com/fnichol/chef-git'
+cookbook 'openssl', :git => 'https://github.com/opscode-cookbooks/openssl.git'
+cookbook 'postgresql', :git => 'https://github.com/coroutine/chef-postgresql.git'
+cookbook 'python', :git => 'https://github.com/fnichol/chef-python.git'
+cookbook 'redis', :git => 'https://github.com/ctrabold/chef-redis.git'
+cookbook 'rvm', :git => 'https://github.com/fnichol/chef-rvm.git'
+cookbook 'tmux', :git => 'ttps://github.com/fnichol/chef-rvm.git'
+
