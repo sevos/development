@@ -3,3 +3,4 @@ projects/
 *.box
 *.swp
 .vagrant
+.idea/
