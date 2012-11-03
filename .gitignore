@@ -5,3 +5,4 @@ projects/
 .vagrant
 .idea/
 chef/tmp
+chef/cookbooks

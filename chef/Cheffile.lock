@@ -1,0 +1,80 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.5.0)
+    build-essential (1.1.2)
+    runit (0.15.0)
+
+GIT
+  remote: https://github.com/bradmontgomery/chef-postgresql.git
+  ref: master
+  sha: c525cc9f73f641c384cd609862bb7f0c3d39a4a6
+  specs:
+    postgresql (1.0.1)
+      apt (>= 0.0.0)
+      openssl (>= 0.0.0)
+
+GIT
+  remote: https://github.com/ctrabold/chef-redis.git
+  ref: master
+  sha: a5686a513d5912a51a4f4cb40f708a4a31cd1707
+  specs:
+    redis (0.0.4)
+
+GIT
+  remote: https://github.com/fnichol/chef-git
+  ref: master
+  sha: 6c19cbefcdad5ec0f62a64dae1f656d660698ea3
+  specs:
+    git (0.9.0)
+      runit (>= 0.0.0)
+
+GIT
+  remote: https://github.com/fnichol/chef-python.git
+  ref: master
+  sha: 33a3dd784a02cc0d33385585ee995bf2ee752ffa
+  specs:
+    python (1.0.2)
+      build-essential (>= 0.0.0)
+
+GIT
+  remote: https://github.com/fnichol/chef-rvm.git
+  ref: master
+  sha: 6cd79589c85365227c930a559cfedc4c5b8bf9f6
+  specs:
+    rvm (0.9.1)
+    tmux (0.9.1)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/build-essential.git
+  ref: master
+  sha: 42ed422b076f429ffec24c323eb2ed707c25417e
+  specs:
+    build_essential (1.1.2)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/openssl.git
+  ref: master
+  sha: ec395219f0586213cb2d34028e252d0884bfe794
+  specs:
+    openssl (1.0.0)
+
+GIT
+  remote: https://github.com/sevos/esl-erlang-chef-cookbook.git
+  ref: master
+  sha: 056be3575a14241c88cbb5ff4fcffddfdaca76c8
+  specs:
+    erlang (1.0.0)
+
+DEPENDENCIES
+  apt (>= 0)
+  build_essential (>= 0)
+  erlang (>= 0)
+  git (>= 0)
+  openssl (>= 0)
+  postgresql (>= 0)
+  python (>= 0)
+  redis (>= 0)
+  rvm (>= 0)
+  tmux (>= 0)
+
