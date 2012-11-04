@@ -1,0 +1,8 @@
+<%= @environment %>:
+<% @database.each do |k, v| %>
+  <% if v.is_a? String %>
+  <%= k %>: "<%= v %>"
+  <% else %>
+  <%= k %>: <%= v %>
+  <% end %>
+<% end %>

@@ -11,8 +11,23 @@ nodes = {
   },
   :core => {
     :ipaddress => "192.168.69.10",
-    :roles => "deployment-target",
-    :memory => 1024
+    :roles => "ruby-deployment-target",
+    :memory => 1024,
+    :config => {
+        :application => {
+          :environment => 'production',
+          :database => {
+            :adapter => 'postgresql',
+            :mame => 'todo_production',
+            :host => 'db.sevoscloud',
+            :user => 'postgresql',
+            :password => ''
+          }
+        },
+        :ruby => {
+            :version => '1.9.3-p0'
+        }
+    }
   }
 }
 
