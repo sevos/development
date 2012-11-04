@@ -9,24 +9,44 @@ nodes = {
     :roles => "database-postgresql",
     :memory => 512
   },
-  :core => {
+  :app1 => {
     :ipaddress => "192.168.69.10",
     :roles => "ruby-deployment-target",
     :memory => 1024,
     :config => {
+      :application => {
+        :environment => 'production',
+        :database => {
+          :adapter => 'postgresql',
+          :database => 'todo_production',
+          :host => 'db.sevoscloud',
+          :username => 'postgres',
+          :password => 'qwerty'
+        }
+      },
+      :ruby => {
+          :version => '1.9.3-p0'
+      }
+    }
+  },
+  :app2 => {
+      :ipaddress => "192.168.69.11",
+      :roles => "ruby-deployment-target",
+      :memory => 1024,
+      :config => {
         :application => {
           :environment => 'production',
           :database => {
-            :adapter => 'postgresql',
-            :mame => 'todo_production',
-            :host => 'db.sevoscloud',
-            :user => 'postgresql',
-            :password => ''
+              :adapter => 'postgresql',
+              :mame => 'todo_production',
+              :host => 'db.sevoscloud',
+              :user => 'postgresql',
+              :password => 'qwerty'
           }
-        },
-        :ruby => {
-            :version => '1.9.3-p0'
-        }
+      },
+      :ruby => {
+          :version => '1.9.3-p0'
+      }
     }
   }
 }

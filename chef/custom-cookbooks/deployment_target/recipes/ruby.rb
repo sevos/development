@@ -3,8 +3,11 @@ node.override[:rvm] = {
         {
             'user' => 'deploy',
             'default_ruby' => node[:ruby][:version],
-            'rubies' => []
+            'rubies' => [],
         }
+    ],
+    'user_global_gems' => [
+        { 'name' => 'bundler' }
     ]
 }
 
@@ -12,10 +15,12 @@ include_recipe 'rvm::user'
 
 # Database comfig
 directory '/home/deploy/shared' do
+  owner 'deploy'
   action :create
 end
 
 directory '/home/deploy/shared/config' do
+  owner 'deploy'
   action :create
 end
 
