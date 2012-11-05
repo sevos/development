@@ -36,7 +36,7 @@ apt-get -y install nfs-common
 apt-get -y install ruby rubygems
 
 # Installing chef & Puppet
-gem install chef --no-ri --no-rdoc --version=0.10.8
+gem install chef --no-ri --no-rdoc --version=10.16.2
 gem pristine --all --no-extensions
 gem install puppet --no-ri --no-rdoc
 
