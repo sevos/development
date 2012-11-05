@@ -2,17 +2,7 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     apt (1.5.0)
-    build-essential (1.1.2)
     runit (0.15.0)
-
-GIT
-  remote: https://github.com/bradmontgomery/chef-postgresql.git
-  ref: master
-  sha: c525cc9f73f641c384cd609862bb7f0c3d39a4a6
-  specs:
-    postgresql (1.0.1)
-      apt (>= 0.0.0)
-      openssl (>= 0.0.0)
 
 GIT
   remote: https://github.com/ctrabold/chef-redis.git
@@ -50,7 +40,7 @@ GIT
   ref: master
   sha: 42ed422b076f429ffec24c323eb2ed707c25417e
   specs:
-    build_essential (1.1.2)
+    build-essential (1.1.2)
 
 GIT
   remote: https://github.com/opscode-cookbooks/openssl.git
@@ -58,6 +48,21 @@ GIT
   sha: ec395219f0586213cb2d34028e252d0884bfe794
   specs:
     openssl (1.0.0)
+
+GIT
+  remote: https://github.com/phlipper/chef-nodejs.git
+  ref: master
+  sha: eb212c3a2c3286a1bca0a16a182170b17fdd55c6
+  specs:
+    nodejs (1.2.0)
+      apt (>= 1.4.4)
+
+GIT
+  remote: https://github.com/phlipper/chef-postgresql.git
+  ref: master
+  sha: f9fb4099f0d1fc40239a7a60d3ff9e0aee06f885
+  specs:
+    postgresql (0.5.0)
 
 GIT
   remote: https://github.com/sevos/esl-erlang-chef-cookbook.git
@@ -68,9 +73,10 @@ GIT
 
 DEPENDENCIES
   apt (>= 0)
-  build_essential (>= 0)
+  build-essential (>= 0)
   erlang (>= 0)
   git (>= 0)
+  nodejs (>= 0)
   openssl (>= 0)
   postgresql (>= 0)
   python (>= 0)

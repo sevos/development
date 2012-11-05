@@ -3,11 +3,28 @@
 
 TLD = 'sevoscloud'
 
+todo_database = {
+    :adapter => 'postgresql',
+    :database => 'todo_production',
+    :host => 'db.sevoscloud',
+    :username => 'todo',
+    :password => 'qwerty'
+}
+
 nodes = {
   :db => {
     :ipaddress => "192.168.69.3",
     :roles => "database-postgresql",
-    :memory => 512
+    :memory => 512,
+    :config => {
+        :databases => [
+            {
+              :name => 'todo_production',
+              :username => 'todo',
+              :password => 'qwerty'
+            }
+        ]
+    }
   },
   :app1 => {
     :ipaddress => "192.168.69.10",
@@ -16,13 +33,7 @@ nodes = {
     :config => {
       :application => {
         :environment => 'production',
-        :database => {
-          :adapter => 'postgresql',
-          :database => 'todo_production',
-          :host => 'db.sevoscloud',
-          :username => 'postgres',
-          :password => 'qwerty'
-        }
+        :database => todo_database
       },
       :ruby => {
           :version => '1.9.3-p0'
@@ -36,13 +47,21 @@ nodes = {
       :config => {
         :application => {
           :environment => 'production',
-          :database => {
-              :adapter => 'postgresql',
-              :mame => 'todo_production',
-              :host => 'db.sevoscloud',
-              :user => 'postgresql',
-              :password => 'qwerty'
-          }
+          :database => todo_database
+      },
+      :ruby => {
+          :version => '1.9.3-p0'
+      }
+    }
+  },
+  :app3 => {
+      :ipaddress => "192.168.69.12",
+      :roles => "ruby-deployment-target",
+      :memory => 1024,
+      :config => {
+        :application => {
+          :environment => 'production',
+          :database => todo_database
       },
       :ruby => {
           :version => '1.9.3-p0'

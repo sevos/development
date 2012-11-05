@@ -1,13 +1,12 @@
 name 'database-postgresql'
 description 'installs postgresql database'
 
-run_list 'recipe[postgresql::server]'
+run_list 'recipe[postgresql::server]', 'recipe[deployment_target::postgresql]'
 
 config = {
-  :password => { :postgres => 'qwerty' },
   :listen_addresses => ['*'],
-  :hba => [
-    {:address => 'all', :method => 'md5'}
+  :pg_hba => [
+    'host    all             all             192.168.69.0/24            md5'
   ]
 }
 
